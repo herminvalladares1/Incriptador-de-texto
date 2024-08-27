@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Encriptador de Mensajes</title>
+</head>
+<body>
+
+    <main>
+        <div class="container__primario">
+            <header>
+                <img class="header__logo" src="./assets/img/Logo.svg" alt="Logo de Alura">
+            </header>
+            <div class="form__section">
+                
+                <textarea class="form__input" placeholder="Ingrese el texto aquí"></textarea>
+                
+                <div class="container__btn">
+                
+                    <div class="container__btn__alert__div">
+                        <img class="container__btn__alert__img" src="./assets/img/bi_exclamation-circle-fill.svg" alt="Alerta">
+                        <div class="container__btn__alert__texto">Solo letras minúsculas y sin acentos</div>
+                    </div>
+                
+                    <div class="par_botones">
+                        <button class="container__btn__encriptar" onclick="tbnEncriptar()">Encriptar</button>
+                        <button class="container__btn__desencriptar" onclick="tbnDesencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <aside id="miAside">
+ 
+            
+            <div class="msg__container">
+                <img class="aside__img" src="./assets/img/Muneco.svg" alt="Busqueda" >
+                <h3 class="msg_texto1">Ningún mensaje se ha encontrado</h3>
+                <p class="msg_texto2">Ingresa el texto que desees encriptar o deseencriptar.</p>
+            </div>
+
+            <div class="aside__resultado">
+                <textarea class="mensaje" readonly></textarea>
+                <button class="btn__copiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+
+        </aside>
+
+    </main>
+    <footer>
+        <h6 class="txt_footer">Desarrollado por Eduardo Oyarzo para Oracle ONE - Alura Latam 2024</h6>
+    </footer>
+
+    <div id="modal">
+        <div id="modal-content">
+            <p id="modal-message">Texto Copiado!!!!</p>
+            <textarea class="modal-texto-copy" readonly></textarea>
+            <button id="close-btn" onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modal2">
+        <div id="modal-content">
+            <p id="modal-message2"><span class="msgbox"></span></p>
+            <button id="close-btn" onclick="closeModal2()">Cerrar</button>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
